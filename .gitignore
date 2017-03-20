@@ -1,0 +1,9 @@
+.vscode
+bower_components
+node_modules
+
+yarn.lock
+bs-config.json
+jsconfig.json
+
+npm-debug.log

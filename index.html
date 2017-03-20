@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        background-color: #282828;
+      }
+      #cel {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 300px;
+        border: 1px solid #444;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      #cel canvas {
+        position: absolute;
+        z-index: 1;
+      }
+      #cel div {
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="cel">
+      <div class="dot"></div>
+    </div>
+    <style>
+      .dot{
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        animation: xAxis 2.5s infinite ease-out;
+      }
+
+      .dot::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        border: 1px solid #fff;
+        animation: yAxis 2.5s infinite ease-in;
+      }
+
+      @keyframes yAxis {
+        50% {
+          animation-timing-function: ease-out;
+          transform: translateY(-100px);
+        }
+      }
+
+      @keyframes xAxis {
+        50% {
+          animation-timing-function: ease-in;
+          transform: translateX(100px);
+        }
+      }
+    </style>
+    <script src="js/cssUtil.js"></script>
+    <script src="js/keyframe.js"></script>
+    <script src="js/typeCel.js"></script>
+    <script src="js/cel.js"></script>
+  </body>
+</html>

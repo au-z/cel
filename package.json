@@ -1,0 +1,22 @@
+{
+  "name": "cel",
+  "version": "1.0.0",
+  "description": "animation library",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "start": "concurrent \"npm run lite\""
+  },
+  "author": "Austin Martin",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.1.0",
+    "lite-server": "^2.3.0",
+    "pump": "^1.0.2"
+  }
+}
